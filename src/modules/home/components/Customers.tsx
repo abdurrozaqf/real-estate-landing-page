@@ -14,8 +14,8 @@ export default function Customers({}: CustomersProps) {
         Kind Words From Our <br /> Happy Customers
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-auto">
-        {MENU_CUSTOMER.map((item) => (
-          <CardCustomer data={item} />
+        {MENU_CUSTOMER.map((item, index) => (
+          <CardCustomer key={index} data={item} />
         ))}
       </div>
     </section>

@@ -27,8 +27,8 @@ export default function Headline({}: HeadlineProps) {
         <div className="hidden lg:block absolute w-full -bottom-10 px-14 2xl:px-28">
           <div className="flex justify-between bg-white rounded-xl px-12 py-6">
             {MENU_ITEMS_HEADLINE.map((item, index) => (
-              <>
-                <div key={item.title}>
+              <div key={index}>
+                <div>
                   <h1 className="font-semibold">{item.title}</h1>
                   <p className="font-light text-sm">{item.subtitle}</p>
                 </div>
@@ -39,7 +39,7 @@ export default function Headline({}: HeadlineProps) {
                       : "border"
                   }
                 />
-              </>
+              </div>
             ))}
             <button
               type="button"

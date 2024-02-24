@@ -10,9 +10,12 @@ export default function About({}: AboutProps) {
     >
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         {MENU_ABOUT.map((item, index) => (
-          <div key={index} className="flex flex-col lg:flex-row items-center">
+          <div
+            key={index}
+            className="flex flex-col lg:flex-row items-center gap-x-8"
+          >
             <h1 className="font-black text-3xl 2xl:text-6xl">{item.count}</h1>
-            <p className="text-neutral-300">{item.decs}</p>
+            <p className="text-neutral-300 w-auto xl:w-[200px]">{item.decs}</p>
           </div>
         ))}
       </div>

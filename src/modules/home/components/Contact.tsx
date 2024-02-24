@@ -42,8 +42,8 @@ export default function Contact({}: ContactProps) {
         <div className="relative">
           <Image
             src={"/images/image-2.jpg"}
-            priority
             alt="image contact us"
+            priority
             width="0"
             height="0"
             sizes="100vw"

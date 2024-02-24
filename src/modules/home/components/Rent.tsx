@@ -22,8 +22,8 @@ export default function Rent({}: RentProps) {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10">
-        {MENU_RENT.map((item) => (
-          <CardRent data={item} />
+        {MENU_RENT.map((item, index) => (
+          <CardRent key={index} data={item} />
         ))}
       </div>
       <button
