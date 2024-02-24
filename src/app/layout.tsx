@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     url: METADATA.openGraph.url,
   },
   openGraph: {
+    images: METADATA.profile,
     url: METADATA.openGraph.url,
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,

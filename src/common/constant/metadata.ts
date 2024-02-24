@@ -14,4 +14,5 @@ export const METADATA = {
     locale: "id-ID",
   },
   exTitle: "| Real Estate",
+  profile: "/profile.png",
 };
