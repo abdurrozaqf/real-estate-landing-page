@@ -2,9 +2,8 @@ import { Ubuntu } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Layout from "@/components/layouts";
-
 import { METADATA } from "@/common/constant/metadata";
+import Layout from "@/components/layouts";
 
 const ubuntu = Ubuntu({
   weight: ["400", "500", "700"],
