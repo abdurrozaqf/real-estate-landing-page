@@ -16,7 +16,7 @@ export default function Auth({}: AuthProps) {
         aria-label="create-account"
         className="h-auto py-2 px-8 rounded-2xl bg-black text-white"
       >
-        <p className="text-lg">Create Account</p>
+        <p className="text-lg font-medium">Create Account</p>
       </Button>
     </div>
   );
