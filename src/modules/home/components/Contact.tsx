@@ -1,5 +1,5 @@
+import { Button } from "antd";
 import Image from "next/image";
-import React from "react";
 
 interface ContactProps {}
 
@@ -31,13 +31,13 @@ export default function Contact({}: ContactProps) {
             The Industry For A While And Has Experience Dealing With Various
             Types Of Properties.
           </p>
-          <button
-            type="button"
+          <Button
+            type="primary"
             aria-label="Contact Us"
-            className="bg-black rounded-xl py-4 px-12 text-white"
+            className="h-auto bg-black rounded-xl py-4 px-12 text-white text-base font-medium"
           >
             Contact Us
-          </button>
+          </Button>
         </div>
         <div className="relative">
           <Image

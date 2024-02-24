@@ -1,5 +1,5 @@
 import { MENU_ITEMS_HEADLINE } from "@/common/constant/menu";
-import React from "react";
+import { Button } from "antd";
 
 interface HeadlineProps {}
 
@@ -17,13 +17,12 @@ export default function Headline({}: HeadlineProps) {
           We'all help you find the key to your dream home. Experience the joy of
           homeownership. Let us make your home buying journey simple
         </p>
-        <button
-          type="button"
-          aria-label="Get Started"
-          className=" px-6 py-2 border border-black rounded-lg font-bold mt-10"
+        <Button
+          aria-label="Get-Started"
+          className="h-auto px-6 py-2 border border-black rounded-lg font-bold mt-10"
         >
-          Get Started
-        </button>
+          <p className="text-base lg:text-lg">Get Started</p>
+        </Button>
         <div className="hidden lg:block absolute w-full -bottom-10 px-14 2xl:px-28">
           <div className="flex justify-between bg-white rounded-xl px-12 py-6">
             {MENU_ITEMS_HEADLINE.map((item, index) => (
@@ -41,13 +40,13 @@ export default function Headline({}: HeadlineProps) {
                 />
               </div>
             ))}
-            <button
-              type="button"
+            <Button
+              type="primary"
               aria-label="Search Property"
-              className="bg-[#4C73FF] rounded-xl px-10 py-3 text-white font-medium"
+              className="h-auto bg-[#4C73FF] rounded-xl px-10 py-3 text-white font-medium text-base"
             >
               Search Property
-            </button>
+            </Button>
           </div>
         </div>
       </div>

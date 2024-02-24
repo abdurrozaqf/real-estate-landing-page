@@ -1,5 +1,4 @@
-import Image from "next/image";
-import React from "react";
+import { Card } from "antd";
 
 import {
   MdOutlineBathtub,
@@ -17,17 +16,18 @@ interface CardRentProps {
 
 export default function CardRent({ data }: CardRentProps) {
   return (
-    <div className="flex flex-col rounded-2xl overflow-hidden bg-white drop-shadow cursor-pointer hover:scale-[1.02] transition-all duration-300">
-      <Image
-        src={data.image}
-        priority
-        alt={data.title}
-        width="0"
-        height="0"
-        sizes="100vw"
-        className="w-full h-[350px] xl:h-[450px] object-cover relative"
-      />
-      <div className="px-8 py-4">
+    <Card
+      cover={
+        <img
+          alt={data.title}
+          src={data.image}
+          loading="lazy"
+          className="w-full h-[350px] xl:h-[450px] object-cover"
+        />
+      }
+      className="rounded-2xl overflow-hidden bg-white drop-shadow-sm cursor-pointer hover:scale-[1.01] transition-all duration-300"
+    >
+      <div className="px-0 lg:px-4 py-0 lg:py-4">
         <h1 className="capitalize font-medium text-2xl lg:text-3xl text-[#4B73FF] mb-2">
           {formatCurrency(data.price)}
         </h1>
@@ -35,8 +35,8 @@ export default function CardRent({ data }: CardRentProps) {
           {data.title}
         </h1>
       </div>
-      <div className="border" />
-      <div className="px-8 pt-4 pb-8 text-[12px] md:text-[14px] lg:text-base">
+      <div className="border mx-0 lg:mx-4 my-4" />
+      <div className="px-0 lg:px-4 pb-0 lg:pb-8 text-[12px] md:text-[14px] lg:text-base">
         <p className="capitalize flex items-center gap-x-2 mb-4">
           <MdOutlineLocationOn /> {data.location}
         </p>
@@ -53,6 +53,6 @@ export default function CardRent({ data }: CardRentProps) {
           </span>
         </p>
       </div>
-    </div>
+    </Card>
   );
 }

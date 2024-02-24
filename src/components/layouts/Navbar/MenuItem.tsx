@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
+import { Button } from "antd";
 import Link from "next/link";
 
-import { toggleValue, selectToggleValue } from "@/utils/toggleSlice";
 import { AiOutlineAlignRight } from "react-icons/ai";
 
+import { toggleValue, selectToggleValue } from "@/utils/toggleSlice";
 import { MenuItems } from "@/common/types/menu";
 
 interface MenuItemProps {
@@ -54,20 +55,19 @@ export default function MenuItem({ items }: MenuItemProps) {
             ))}
           </div>
           <div className="lg:hidden flex flex-col gap-y-4">
-            <button
-              type="button"
+            <Button
+              type="text"
               aria-label="login"
-              className="font font-medium tracking-wide"
+              className="h-auto font-medium tracking-wide"
             >
-              Log in
-            </button>
-            <button
-              type="button"
-              aria-label="create account"
-              className="bg-black rounded-xl text-white px-6 py-2.5 font-medium tracking-wide"
+              <p className="text-lg">Log in</p>
+            </Button>
+            <Button
+              aria-label="create-account"
+              className="h-auto py-2 px-8 rounded-2xl bg-black text-white"
             >
-              Create Account
-            </button>
+              <p className="text-lg">Create Account</p>
+            </Button>
           </div>
         </>
       )}

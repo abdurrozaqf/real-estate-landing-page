@@ -1,7 +1,6 @@
-import React from "react";
-
 import CardRent from "@/components/elements/CardRent";
 import { MENU_RENT } from "@/common/mocks/rent";
+import { Button } from "antd";
 
 interface RentProps {}
 
@@ -26,13 +25,13 @@ export default function Rent({}: RentProps) {
           <CardRent key={index} data={item} />
         ))}
       </div>
-      <button
-        type="button"
+      <Button
+        type="primary"
         aria-label="explore property"
-        className="px-8 py-3 font-medium text-lg rounded-2xl bg-black text-white"
+        className="h-auto px-8 py-3 font-medium text-base rounded-2xl bg-black text-white"
       >
         Explore All Property
-      </button>
+      </Button>
     </section>
   );
 }

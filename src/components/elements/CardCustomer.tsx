@@ -1,6 +1,7 @@
-import { Customer } from "@/common/types/response";
+import { Avatar, Card } from "antd";
 import Image from "next/image";
-import React from "react";
+
+import { Customer } from "@/common/types/response";
 
 interface CardCustomerProps {
   data: Customer;
@@ -8,7 +9,7 @@ interface CardCustomerProps {
 
 export default function CardCustomer({ data }: CardCustomerProps) {
   return (
-    <div className="w-full h-auto border rounded-2xl p-6 lg:p-10 flex flex-col gap-y-4 drop-shadow">
+    <Card className="w-full h-auto">
       <Image
         src="/icons/quotation-mark.png"
         alt="quotation-mark"
@@ -16,20 +17,16 @@ export default function CardCustomer({ data }: CardCustomerProps) {
         width="0"
         height="0"
         sizes="100vw"
-        className="w-[35px] xl:w-[50px] h-auto"
+        className="w-[35px] xl:w-[50px] h-auto mb-6"
       />
-      <p className="capitalize text-[12px] md:text-[14px] xl:text-base">
+      <p className="capitalize text-[12px] md:text-[14px] xl:text-base mb-4">
         {data.message}
       </p>
       <div className="flex items-center gap-x-3">
-        <Image
+        <Avatar
           src={data.image}
           alt={data.name}
-          priority
-          width="0"
-          height="0"
-          sizes="100vw"
-          className="w-[35px] xl:w-[50px] h-[35px] xl:h-[50px] object-cover rounded-full"
+          className="w-[35px] xl:w-[50px] h-[35px] xl:h-[50px]"
         />
         <div>
           <h1 className="font-medium text-[14px] md:text-base xl:text-lg">
@@ -40,6 +37,6 @@ export default function CardCustomer({ data }: CardCustomerProps) {
           </p>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

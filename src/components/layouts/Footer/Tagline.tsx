@@ -1,6 +1,6 @@
+import { Button, Input } from "antd";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function Tagline() {
   return (
@@ -20,18 +20,18 @@ export default function Tagline() {
         Home At A Time
       </h1>
       <div className="border rounded-xl overflow-hidden flex items-center justify-between p-1">
-        <input
-          type="text"
+        <Input
           placeholder="Enter your email"
-          className="p-2.5 xl:p-5 outline-none bg-black"
+          variant="borderless"
+          className="w-auto placeholder:text-white focus:text-white"
         />
-        <button
-          type="button"
+        <Button
+          type="primary"
           aria-label="Subscribe"
-          className="rounded-lg p-2.5 xl:p-5 bg-[#4B73FF]"
+          className="h-auto rounded-lg font-medium py-2 px-4 xl:py-4 xl:px-6 bg-[#4B73FF]"
         >
           Subscribe
-        </button>
+        </Button>
       </div>
     </div>
   );
