@@ -9,7 +9,7 @@ export default function Headline({}: HeadlineProps) {
       id="home"
       className="w-full h-auto bg-[#F4F7FC] px-4 lg:px-20 pt-8 pb-20"
     >
-      <div className="h-[720px] rounded-2xl flex flex-col gap-y-4 md:gap-y-8 items-center relative bg-[url(`/images/image-1.jpg`)] bg-cover bg-center">
+      <div className="h-[720px] rounded-2xl flex flex-col gap-y-4 md:gap-y-8 items-center relative image-headline">
         <h1 className="font-semibold text-2xl md:text-4xl lg:text-5xl xl:text-6xl flex flex-col items-center text-center mt-28">
           Investing In Your Future <br /> One Home At A Time
         </h1>
