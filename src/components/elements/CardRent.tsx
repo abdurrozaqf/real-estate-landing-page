@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card } from "antd";
 
 import {
@@ -18,10 +19,13 @@ export default function CardRent({ data }: CardRentProps) {
   return (
     <Card
       cover={
-        <img
+        <Image
           alt={data.title}
           src={data.image}
-          loading="lazy"
+          priority
+          width="0"
+          height="0"
+          sizes="100vw"
           className="w-full h-[350px] xl:h-[450px] object-cover"
         />
       }
