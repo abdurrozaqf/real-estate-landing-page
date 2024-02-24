@@ -15,6 +15,7 @@ export default function VideoPlayer({}: VideoPlayerProps) {
           <Image
             src="/images/image-9.jpg"
             alt="image video player"
+            priority
             width="0"
             height="0"
             sizes="100vw"

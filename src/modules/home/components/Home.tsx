@@ -1,15 +1,16 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import VideoPlayer from "./VideoPlayer";
-import Customers from "./Customers";
-import Headline from "./Headline";
 import Contact from "./Contact";
 import About from "./About";
-import Rent from "./Rent";
 
-interface Props {}
+const Customers = lazy(() => import("./Customers"));
+const Headline = lazy(() => import("./Headline"));
+const Rent = lazy(() => import("./Rent"));
 
-export default function Home({}: Props) {
+interface HomeProps {}
+
+export default function Home({}: HomeProps) {
   return (
     <>
       <Headline />
