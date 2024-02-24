@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
+interface VideoPlayerProps {}
 
-export default function VideoPlayer({}: Props) {
+export default function VideoPlayer({}: VideoPlayerProps) {
   return (
     <section className="w-full h-auto relative "></section>
 

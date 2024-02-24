@@ -2,7 +2,7 @@ import { MENU_CUSTOMER } from "@/common/mocks/customer";
 import CardCustomer from "@/components/elements/CardCustomer";
 import React from "react";
 
-type CustomersProps = {};
+interface CustomersProps {}
 
 export default function Customers({}: CustomersProps) {
   return (

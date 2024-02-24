@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface TaglineProps {}
-
-export default function Tagline({}: TaglineProps) {
+export default function Tagline() {
   return (
     <div className="flex flex-col gap-y-6 lg:gap-y-0 lg:justify-between">
       <Link href="#home" aria-label="home">

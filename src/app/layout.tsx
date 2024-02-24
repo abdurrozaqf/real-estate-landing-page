@@ -1,4 +1,4 @@
-import { Inter, Ubuntu } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -7,11 +7,6 @@ import Layout from "@/components/layouts";
 import { METADATA } from "@/common/constant/metadata";
 
 const ubuntu = Ubuntu({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-});
-
-const inter = Inter({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
@@ -43,7 +38,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${ubuntu.className}`}>
         <Layout>{children}</Layout>
       </body>
     </html>
