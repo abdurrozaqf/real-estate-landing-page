@@ -14,8 +14,8 @@ export default function Headline({}: HeadlineProps) {
           Investing In Your Future <br /> One Home At A Time
         </h1>
         <p className="text-center text-[11px] md:text-base w-[260px] md:w-[360px] lg:w-[520px]">
-          We'all help you find the key to your dream home. Experience the joy of
-          homeownership. Let us make your home buying journey simple
+          We&apos;all help you find the key to your dream home. Experience the
+          joy of homeownership. Let us make your home buying journey simple
         </p>
         <Button
           aria-label="Get-Started"
