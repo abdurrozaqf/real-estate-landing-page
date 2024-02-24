@@ -1,9 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
 
+import { toggleValue, selectToggleValue } from "@/utils/toggleSlice";
 import { AiOutlineAlignRight } from "react-icons/ai";
 
 import { MenuItems } from "@/common/types/menu";
@@ -13,9 +12,11 @@ interface MenuItemProps {
 }
 
 export default function MenuItem({ items }: MenuItemProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(isOpen === true ? false : true);
+  const dispatch = useDispatch();
+  const toggleState = useSelector(selectToggleValue);
+  const handleToggle = () => {
+    dispatch(toggleValue());
+  };
 
   return (
     <div className="w-full flex flex-col lg:flex-row gap-y-6 lg:gap-x-8 2xl:gap-x-16 lg:items-center">
@@ -32,14 +33,14 @@ export default function MenuItem({ items }: MenuItemProps) {
         </Link>
         <button
           type="button"
-          onClick={toggle}
+          onClick={handleToggle}
           aria-label="btn-navbar"
           className="block lg:hidden"
         >
           <AiOutlineAlignRight />
         </button>
       </div>
-      {isOpen && (
+      {toggleState && (
         <>
           <div className="flex lg:hidden flex-col gap-y-6 tracking-wide ml-2">
             {items.map((item) => (
