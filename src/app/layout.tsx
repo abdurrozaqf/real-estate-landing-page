@@ -11,13 +11,18 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : process.env.DOMAIN || ""
+  ),
   title: {
     default: "Real Estate",
     template: "%s | Real Estate",
   },
+  description: METADATA.description,
   keywords: METADATA.keyword,
   creator: METADATA.creator,
-  description: METADATA.description,
   authors: {
     name: METADATA.creator,
     url: METADATA.openGraph.url,
