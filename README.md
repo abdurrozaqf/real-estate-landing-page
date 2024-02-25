@@ -1,37 +1,54 @@
-## Real Estate - Landing Page
+# Real Estate - Landing Page
 
-Landing Page Real Estate built with Next Js, Tailwind CSS, and Ant Design.
+<div align="center" width="100%">
+   <img src="/public/realestate-page.png" alt="Real Estate">
+</div>
+
+## Introduction
+
+Real Estate is a comprehensive platform dedicated to facilitating real estate transactions for both residential and commercial clients. From luxurious homes to prime commercial spaces, we cater to a diverse range of property needs, serving individuals, businesses, and investors alike.
 
 Click [_here_](https://realestate-landingpage.vercel.app/) for result.
 
-## Tech Stack
+## Features
 
-Next Js, Tailwind CSS, Ant Design, Redux Toolkit.
+- **Modern Stack**: Built with Next.js, a powerful framework, TailwindCSS and Ant Design for responsive and elegant styling.
+- **Responsive Design**: Ensure a seamless experience across various devices and screen sizes.
+- **Huge selections of Property**: Discover your dream property with our extensive network of real estate partners spanning across the globe.
 
-## Run Locally
+## ⚙️ Tech Stack
 
-Clone the project
+- Next Js
+- Tailwind CSS
+- Ant Design
+- Redux Toolkit
 
-```bash
-  git clone https://github.com/abdurrozaqf/real-estate-landing-page.git
-```
+## Getting Started
 
-Go to the project directory
+Before you begin, make sure you have Node.js and npm (Node Package Manager) installed on your system. Familiarity with React Js, Tailwind CSS, Shadcn/ui, and Axios will be beneficial for customization.
 
-```bash
-  cd real-estate-landing-page
-```
+## Installation
 
-Install dependencies
+1. Clone this repository to your local machine using:
 
-```bash
-  npm install
-```
+   ```bash
+   git clone https://github.com/abdurrozaqf/real-estate-landing-page.git
+   ```
 
-Start the server
+2. Navigate to the project directory:
+   ```bash
+   cd real-estate-landing-page
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-  npm run dev
-```
+## Usage
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Configure your database settings in the .env file.
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Access the application in your browser at http://localhost:3000.
