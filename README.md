@@ -25,7 +25,7 @@ Click [_here_](https://realestate-landingpage.vercel.app/) for result.
 
 ## Getting Started
 
-Before you begin, make sure you have Node.js and npm (Node Package Manager) installed on your system. Familiarity with React Js, Tailwind CSS, Shadcn/ui, and Axios will be beneficial for customization.
+Before you begin, make sure you have Node.js and npm (Node Package Manager) installed on your system. Familiarity with Netx.js, Tailwind CSS, Ant Design, and Redux Toolkit will be beneficial for customization.
 
 ## Installation
 
@@ -36,10 +36,13 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd real-estate-landing-page
    ```
+
 3. Install the dependencies:
+
    ```bash
    npm install
    ```
