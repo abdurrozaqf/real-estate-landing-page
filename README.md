@@ -14,7 +14,7 @@ A modern real estate landing page built with Next.js. Showcase residential and c
 - **Video showcase** — Embedded property tour with YouTube link
 - **Customer testimonials** — Review cards from happy clients
 - **Contact & partners** — Contact CTA with partner logo strip
-- **Responsive layout** — Mobile-first design with Tailwind CSS and Ant Design
+- **Responsive layout** — Mobile-first design with Tailwind CSS and shadcn/ui
 - **Smooth animations** — Scroll-triggered motion via Framer Motion
 - **SEO ready** — Open Graph, Twitter cards, sitemap, robots.txt, and web manifest
 
@@ -25,7 +25,7 @@ A modern real estate landing page built with Next.js. Showcase residential and c
 | Framework     | [Next.js 15](https://nextjs.org/) (App Router)            |
 | Language      | [TypeScript](https://www.typescriptlang.org/)             |
 | Styling       | [Tailwind CSS](https://tailwindcss.com/)                  |
-| UI Components | [Ant Design](https://ant.design/)                         |
+| UI Components | [shadcn/ui](https://ui.shadcn.com/)                       |
 | State         | [Redux Toolkit](https://redux-toolkit.js.org/)            |
 | Animation     | [Framer Motion](https://www.framer.com/motion/)           |
 | Icons         | [React Icons](https://react-icons.github.io/react-icons/) |

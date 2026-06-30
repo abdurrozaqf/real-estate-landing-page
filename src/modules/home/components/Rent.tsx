@@ -1,27 +1,25 @@
 import CardRent from "@/components/elements/CardRent";
+import { Button } from "@/components/ui/button";
 import { MENU_RENT } from "@/common/mocks/rent";
-import { Button } from "antd";
 import { MotionLi } from "@/utils/motion";
 
-interface RentProps {}
-
-export default function Rent({}: RentProps) {
+export default function Rent() {
   return (
     <section
       id="rent"
-      className="w-full min-h-screen bg-[#F4F7FC] px-4 md:px-16 2xl:px-48 py-24 flex flex-col items-center gap-y-16 "
+      className="flex min-h-screen w-full flex-col items-center gap-y-16 bg-[#F4F7FC] px-4 py-24 md:px-16 2xl:px-48"
     >
-      <div className="w-full flex flex-col items-center">
-        <h1 className="font-medium text-3xl md:text-4xl xl:text-5xl text-center mb-10">
+      <div className="flex w-full flex-col items-center">
+        <h2 className="mb-10 text-center text-3xl font-medium md:text-4xl xl:text-5xl">
           Our Popular Property
-        </h1>
-        <p className="text-[12px] md:text-[14px] xl:text-lg text-center lg:w-[760px] text-neutral-600">
+        </h2>
+        <p className="text-center text-[12px] text-neutral-600 md:text-[14px] lg:w-[760px] xl:text-lg">
           Look For An Agency With A Proven Track Record Of Success In Buying,
           Selling, Or Renting Properties. You Want An Agency That Has Been In
           The Industry For A While
         </p>
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10">
+      <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
         {MENU_RENT.map((item, index) => (
           <MotionLi
             key={index}
@@ -33,11 +31,7 @@ export default function Rent({}: RentProps) {
           </MotionLi>
         ))}
       </ul>
-      <Button
-        type="primary"
-        aria-label="explore property"
-        className="h-auto px-8 py-3 font-medium text-base rounded-2xl bg-black text-white"
-      >
+      <Button variant="inverse" size="lg" aria-label="explore property">
         Explore All Property
       </Button>
     </section>

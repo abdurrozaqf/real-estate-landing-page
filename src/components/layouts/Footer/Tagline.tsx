@@ -1,10 +1,12 @@
-import { Button, Input } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
 export default function Tagline() {
   return (
-    <div className="flex flex-col gap-y-6 lg:gap-y-0 lg:justify-between">
+    <div className="flex flex-col gap-y-6 lg:justify-between lg:gap-y-0">
       <Link href="#home" aria-label="home">
         <Image
           src="/logo-2.png"
@@ -12,24 +14,21 @@ export default function Tagline() {
           width="0"
           height="0"
           sizes="100vw"
-          className="w-[180px] h-auto"
+          className="h-auto w-[180px]"
         />
       </Link>
-      <h1 className="text-base xl:text-lg">
+      <h2 className="text-base xl:text-lg">
         Investing In Your Future One <br />
         Home At A Time
-      </h1>
-      <div className="border rounded-xl overflow-hidden flex items-center justify-between p-1">
+      </h2>
+      <div className="flex items-center justify-between overflow-hidden rounded-xl border p-1">
         <Input
+          type="email"
           placeholder="Enter your email"
-          variant="borderless"
-          className="w-auto placeholder:text-white focus:text-white"
+          aria-label="Email address"
+          className="flex-1 border-0 bg-transparent text-white shadow-none placeholder:text-neutral-400 focus-visible:ring-0"
         />
-        <Button
-          type="primary"
-          aria-label="Subscribe"
-          className="h-auto rounded-lg font-medium py-2 px-4 xl:py-4 xl:px-6 bg-[#4B73FF]"
-        >
+        <Button aria-label="Subscribe" size="lg" className="shrink-0">
           Subscribe
         </Button>
       </div>

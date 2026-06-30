@@ -2,31 +2,29 @@
 
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
-import { Button } from "antd";
 
+import { Button } from "@/components/ui/button";
 import { MENU_ITEMS_HEADLINE } from "@/common/constant/menu";
 import Hero from "./Hero";
 
-interface HeadlineProps {}
-
-export default function Headline({}: HeadlineProps) {
+export default function Headline() {
   const ref = useRef(null);
 
   return (
     <motion.section
       id="home"
       ref={ref}
-      className="w-full h-auto bg-[#F4F7FC] px-4 lg:px-20 pt-8 pb-20"
+      className="h-auto w-full bg-[#F4F7FC] px-4 pt-8 pb-20 lg:px-20"
     >
-      <div className="h-[720px] rounded-2xl relative image-headline">
+      <div className="image-headline relative h-[720px] rounded-2xl">
         <Hero sectionRef={ref} />
-        <div className="hidden lg:block absolute w-full -bottom-10 px-14 2xl:px-28">
-          <div className="flex justify-between bg-white rounded-xl px-12 py-6">
+        <div className="absolute -bottom-10 hidden w-full px-14 lg:block 2xl:px-28">
+          <div className="flex items-center justify-between rounded-xl bg-white px-12 py-6">
             {MENU_ITEMS_HEADLINE.map((item, index) => (
-              <div key={index} className="w-full flex justify-around">
+              <div key={index} className="flex w-full justify-around">
                 <div>
-                  <h1 className="font-semibold">{item.title}</h1>
-                  <p className="font-light text-sm">{item.subtitle}</p>
+                  <h2 className="font-semibold">{item.title}</h2>
+                  <p className="text-sm font-light">{item.subtitle}</p>
                 </div>
                 <div
                   className={
@@ -37,11 +35,7 @@ export default function Headline({}: HeadlineProps) {
                 />
               </div>
             ))}
-            <Button
-              type="primary"
-              aria-label="Search Property"
-              className="h-auto bg-[#4C73FF] rounded-xl px-10 py-3 text-white font-medium text-base"
-            >
+            <Button size="lg" aria-label="Search Property" className="px-10">
               Search Property
             </Button>
           </div>

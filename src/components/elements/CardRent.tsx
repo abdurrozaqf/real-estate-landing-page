@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Card } from "antd";
-
 import {
   MdOutlineBathtub,
   MdOutlineLocationOn,
@@ -8,6 +6,7 @@ import {
 } from "react-icons/md";
 import { LuBedDouble } from "react-icons/lu";
 
+import { Card, CardContent } from "@/components/ui/card";
 import { formatCurrency } from "@/utils/formatter";
 import { Rent } from "@/common/types/response";
 
@@ -17,46 +16,42 @@ interface CardRentProps {
 
 export default function CardRent({ data }: CardRentProps) {
   return (
-    <Card
-      cover={
-        <Image
-          alt={data.title}
-          src={data.image}
-          priority
-          width="0"
-          height="0"
-          sizes="100vw"
-          className="w-full h-[350px] xl:h-[450px] object-cover"
-        />
-      }
-      className="rounded-2xl overflow-hidden bg-white drop-shadow-xs cursor-pointer hover:scale-[1.01] transition-all duration-300"
-    >
-      <div className="px-0 py-0 lg:px-4 lg:py-4">
-        <h1 className="capitalize font-medium text-2xl lg:text-3xl text-[#4B73FF] mb-2">
+    <Card className="cursor-pointer overflow-hidden bg-white shadow-sm transition-all duration-300 hover:scale-[1.01]">
+      <Image
+        alt={data.title}
+        src={data.image}
+        priority
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="h-[350px] w-full object-cover xl:h-[450px]"
+      />
+      <CardContent className="px-4 py-4 lg:px-6 lg:py-6">
+        <h2 className="mb-2 text-2xl font-medium capitalize text-primary lg:text-3xl">
           {formatCurrency(data.price)}
-        </h1>
-        <h1 className="text-base font-medium capitalize font lg:text-lg">
+        </h2>
+        <h3 className="text-base font-medium capitalize lg:text-lg">
           {data.title}
-        </h1>
-      </div>
-      <div className="mx-0 my-4 border lg:mx-4" />
-      <div className="px-0 lg:px-4 pb-0 lg:pb-8 text-[12px] md:text-[14px] lg:text-base">
-        <p className="flex items-center mb-4 capitalize gap-x-2">
-          <MdOutlineLocationOn /> {data.location}
-        </p>
-        <p className="flex justify-between capitalize">
-          <span className="flex items-center gap-x-2">
-            <LuBedDouble /> {data.rooms.bed} Bed
-          </span>
-          <span className="flex items-center gap-x-2">
-            <MdOutlineBathtub /> {data.rooms.bath} Bath
-          </span>
-          <span className="flex items-center gap-x-2">
-            <MdOutlineDirectionsCar />
-            {data.rooms.parking} Parking
-          </span>
-        </p>
-      </div>
+        </h3>
+        <div className="my-4 border" />
+        <div className="text-[12px] md:text-[14px] lg:text-base">
+          <p className="mb-4 flex items-center gap-x-2 capitalize">
+            <MdOutlineLocationOn /> {data.location}
+          </p>
+          <p className="flex justify-between capitalize">
+            <span className="flex items-center gap-x-2">
+              <LuBedDouble /> {data.rooms.bed} Bed
+            </span>
+            <span className="flex items-center gap-x-2">
+              <MdOutlineBathtub /> {data.rooms.bath} Bath
+            </span>
+            <span className="flex items-center gap-x-2">
+              <MdOutlineDirectionsCar />
+              {data.rooms.parking} Parking
+            </span>
+          </p>
+        </div>
+      </CardContent>
     </Card>
   );
 }

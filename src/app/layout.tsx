@@ -1,9 +1,12 @@
-import { Ubuntu } from "next/font/google";
+import { Ubuntu, Geist } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
 import { METADATA } from "@/common/constant/metadata";
 import Layout from "@/components/layouts";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const ubuntu = Ubuntu({
   weight: ["400", "500", "700"],
@@ -59,7 +62,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${ubuntu.className}`}>
         <Layout>{children}</Layout>
       </body>

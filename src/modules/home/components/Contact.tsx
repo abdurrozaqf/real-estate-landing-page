@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { Button } from "antd";
 
+import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/utils/motion";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col w-full h-screen px-4 py-20 md:px-20"
+      className="flex h-screen w-full flex-col px-4 py-20 md:px-20"
     >
-      <div className="justify-between hidden w-full mb-16 lg:flex">
+      <div className="mb-16 hidden w-full justify-between lg:flex">
         {[1, 2, 3, 4, 5].map((_, index) => (
           <Image
             key={index}
@@ -19,31 +19,27 @@ export default function Contact() {
             width="0"
             height="0"
             sizes="100vw"
-            className="w-[120px] xl:w-[200px] h-auto"
+            className="h-auto w-[120px] xl:w-[200px]"
           />
         ))}
       </div>
-      <div className="flex flex-col items-center justify-around w-full lg:flex-row gap-y-36">
+      <div className="flex w-full flex-col items-center justify-around gap-y-36 lg:flex-row">
         <MotionDiv
           className="w-full lg:w-[460px] 2xl:w-[500px]"
           initial={{ translateX: -100, opacity: 0.3 }}
           whileInView={{ translateX: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="mb-6 text-3xl font-bold lg:text-4xl 2xl:text-5xl">
+          <h2 className="mb-6 text-3xl font-bold lg:text-4xl 2xl:text-5xl">
             Navigating Your Real Estate Journey
-          </h1>
-          <p className="text-[12px] md:text-base lg:text-[14px] mb-8 lg:mb-16">
+          </h2>
+          <p className="mb-8 text-[12px] md:text-base lg:mb-16 lg:text-[14px]">
             Look For An Agency With A Proven Track Record Of Success In Buying,
             Selling, Or Renting Properties. You Want An Agency That Has Been In
             The Industry For A While And Has Experience Dealing With Various
             Types Of Properties.
           </p>
-          <Button
-            type="primary"
-            aria-label="Contact Us"
-            className="h-auto px-12 py-4 text-base font-medium text-white bg-black rounded-xl"
-          >
+          <Button variant="inverse" size="lg" aria-label="Contact Us" className="px-12">
             Contact Us
           </Button>
         </MotionDiv>
@@ -60,14 +56,14 @@ export default function Contact() {
             width="0"
             height="0"
             sizes="100vw"
-            className="w-auto h-[480px] xl:h-[580px] object-cover rounded-3xl"
+            className="h-[480px] w-auto rounded-3xl object-cover xl:h-[580px]"
           />
-          <div className="w-[180px] absolute z-1 -top-14 left-24 bg-white rounded-xl px-8 py-4 drop-shadow-sm block lg:hidden">
-            <h1 className="mb-2 text-4xl font-black text-blue-600">22K+</h1>
+          <div className="absolute -top-14 left-24 z-1 block w-[180px] rounded-xl bg-white px-8 py-4 drop-shadow-sm lg:hidden">
+            <h3 className="mb-2 text-4xl font-black text-primary">22K+</h3>
             <p className="text-sm">Property ready to buy and sell</p>
           </div>
-          <div className="w-[180px] absolute z-1 bottom-16 xl:bottom-40 -left-24 bg-white rounded-xl px-8 py-4 drop-shadow-sm hidden lg:block">
-            <h1 className="mb-2 text-4xl font-black text-blue-600">22K+</h1>
+          <div className="absolute bottom-16 -left-24 z-1 hidden w-[180px] rounded-xl bg-white px-8 py-4 drop-shadow-sm lg:block xl:bottom-40">
+            <h3 className="mb-2 text-4xl font-black text-primary">22K+</h3>
             <p className="text-sm">Property ready to buy and sell</p>
           </div>
         </MotionDiv>
