@@ -17,7 +17,7 @@ export default function Layout({ children }: LayoutsProps) {
     <div className="flex flex-col justify-center items-center">
       <Provider store={store}>
         <Navbar />
-        <main className="w-full flex-1 scroll-smooth transition-all duration-300">
+        <main className="w-full min-h-screen scroll-smooth transition-all duration-300">
           {children}
         </main>
         <Footer />

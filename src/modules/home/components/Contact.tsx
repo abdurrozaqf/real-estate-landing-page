@@ -1,11 +1,14 @@
-import { Button } from "antd";
 import Image from "next/image";
+import { Button } from "antd";
 
-interface ContactProps {}
+import { MotionDiv } from "@/utils/motion";
 
-export default function Contact({}: ContactProps) {
+export default function Contact() {
   return (
-    <section id="contact" className="w-full h-auto px-4 md:px-20 py-20">
+    <section
+      id="contact"
+      className="w-full h-screen flex flex-col px-4 md:px-20 py-20"
+    >
       <div className="w-full hidden lg:flex justify-between mb-16">
         {[1, 2, 3, 4, 5].map((_, index) => (
           <Image
@@ -21,7 +24,12 @@ export default function Contact({}: ContactProps) {
         ))}
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-y-36 items-center justify-around">
-        <div className="w-full lg:w-[460px] 2xl:w-[500px]">
+        <MotionDiv
+          className="w-full lg:w-[460px] 2xl:w-[500px]"
+          initial={{ translateX: -100, opacity: 0.3 }}
+          whileInView={{ translateX: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           <h1 className="font-bold text-3xl lg:text-4xl 2xl:text-5xl mb-6">
             Navigating Your Real Estate Journey
           </h1>
@@ -38,8 +46,13 @@ export default function Contact({}: ContactProps) {
           >
             Contact Us
           </Button>
-        </div>
-        <div className="relative">
+        </MotionDiv>
+        <MotionDiv
+          className="relative"
+          initial={{ translateX: 100, opacity: 0.3 }}
+          whileInView={{ translateX: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           <Image
             src={"/images/image-2.jpg"}
             alt="image contact us"
@@ -57,7 +70,7 @@ export default function Contact({}: ContactProps) {
             <h1 className="text-4xl text-blue-600 font-black mb-2">22K+</h1>
             <p className="text-sm">Property ready to buy and sell</p>
           </div>
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );

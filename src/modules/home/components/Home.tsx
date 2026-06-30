@@ -8,9 +8,7 @@ const Customers = lazy(() => import("./Customers"));
 const Headline = lazy(() => import("./Headline"));
 const Rent = lazy(() => import("./Rent"));
 
-interface HomeProps {}
-
-export default function Home({}: HomeProps) {
+export default function Home() {
   return (
     <>
       <Headline />

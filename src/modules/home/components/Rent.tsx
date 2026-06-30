@@ -1,6 +1,7 @@
 import CardRent from "@/components/elements/CardRent";
 import { MENU_RENT } from "@/common/mocks/rent";
 import { Button } from "antd";
+import { MotionLi } from "@/utils/motion";
 
 interface RentProps {}
 
@@ -20,11 +21,18 @@ export default function Rent({}: RentProps) {
           The Industry For A While
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10">
+      <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10">
         {MENU_RENT.map((item, index) => (
-          <CardRent key={index} data={item} />
+          <MotionLi
+            key={index}
+            initial={{ opacity: 0.8, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            <CardRent data={item} />
+          </MotionLi>
         ))}
-      </div>
+      </ul>
       <Button
         type="primary"
         aria-label="explore property"
