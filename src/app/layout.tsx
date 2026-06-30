@@ -60,7 +60,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <head />
       <body className={`${ubuntu.className}`}>
         <Layout>{children}</Layout>
       </body>
