@@ -2,7 +2,7 @@ export const METADATA = {
   title: "Real Estate",
   authors: {
     name: "Abdur Rozaq Fakhruddin",
-    url: process.env.DOMAIN,
+    url: process.env.NEXT_PUBLIC_DOMAIN,
   },
   creator: "Abdur Rozaq F",
   description:
@@ -24,16 +24,16 @@ export const METADATA = {
     locale: "id-ID",
     title: "Real Estate",
     siteName: "Real Estate",
-    url: "https://realestate-landingpage.vercel.app/",
+    url: "https://realestate.abdurrozaqf-dev.workers.dev/",
     description:
       "Website Real Estate, landing page, residential, commercial, industrial, raw land, and special use",
     images: {
-      url: `https://realestate-landingpage.vercel.app/og.png`,
+      url: `https://realestate.abdurrozaqf-dev.workers.dev/og.png`,
       width: 1200,
       height: 630,
       alt: "Real Estate",
     },
   },
-  siteUrl: "https://realestate-landingpage.vercel.app/",
-  manifest: "https://realestate-landingpage.vercel.app/site.webmanifest",
+  siteUrl: "https://realestate.abdurrozaqf-dev.workers.dev/",
+  manifest: "https://realestate.abdurrozaqf-dev.workers.dev/site.webmanifest",
 };

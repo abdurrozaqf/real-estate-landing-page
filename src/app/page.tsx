@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Real Estate",
   description: "Helping You Get More For Your Real Estate",
   alternates: {
-    canonical: process.env.DOMAIN,
+    canonical: process.env.NEXT_PUBLIC_DOMAIN,
   },
 };
 

@@ -2,7 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const domain =
-    process.env.DOMAIN || "https://realestate-landingpage.vercel.app/";
+    process.env.NEXT_PUBLIC_DOMAIN ||
+    "https://realestate.abdurrozaqf-dev.workers.dev/";
   return [
     {
       url: domain,

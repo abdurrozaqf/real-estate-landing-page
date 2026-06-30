@@ -17,7 +17,7 @@ export const HeadMetaData: React.FC<{
   const baseUrl =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://realestate-landingpage.vercel.app";
+      : "https://realestate.abdurrozaqf-dev.workers.dev";
 
   const pageUrl = new URL(pathname, baseUrl).toString();
 
@@ -41,7 +41,7 @@ export const HeadMetaData: React.FC<{
 
       <meta
         property="og:url"
-        content="https://realestate-landingpage.vercel.app/"
+        content="https://realestate.abdurrozaqf-dev.workers.dev/"
       />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Real Estate - Landing Page" />
@@ -54,11 +54,11 @@ export const HeadMetaData: React.FC<{
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:domain"
-        content="realestate-landingpage.vercel.app"
+        content="realestate.abdurrozaqf-dev.workers.dev"
       />
       <meta
         property="twitter:url"
-        content="https://realestate-landingpage.vercel.app/"
+        content="https://realestate.abdurrozaqf-dev.workers.dev/"
       />
       <meta name="twitter:title" content="Real Estate - Landing Page" />
       <meta
